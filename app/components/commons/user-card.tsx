@@ -11,6 +11,7 @@ export default function UserCard() {
             User Dev
           </h3>
         </div>
+        <p className="opacity-40">Eu faço produtos para a internet</p>
       </div>
     </div>
   )
