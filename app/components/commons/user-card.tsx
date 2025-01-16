@@ -1,3 +1,4 @@
+import { Facebook, Instagram, Linkedin, Twitter, Plus } from 'lucide-react'
 
 export default function UserCard() {
   return (
