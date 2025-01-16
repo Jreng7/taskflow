@@ -17,7 +17,11 @@ export default function UserCard() {
       <div className="flex flex-col gap-2 w-full">
         <span className="uppercase text-xs font-medium">Links</span>
         <div className="flex gap-3">
-
+          <Facebook />
+          <Instagram />
+          <Linkedin />
+          <Twitter />
+          <Plus />
         </div>
       </div>
     </div>
