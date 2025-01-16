@@ -13,6 +13,9 @@ export default function UserCard() {
         </div>
         <p className="opacity-40">Eu faço produtos para a internet</p>
       </div>
+      <div className="flex flex-col gap-2 w-full">
+        <span className="uppercase text-xs font-medium">Links</span>
+      </div>
     </div>
   )
 }
