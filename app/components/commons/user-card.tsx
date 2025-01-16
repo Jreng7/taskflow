@@ -21,7 +21,7 @@ export default function UserCard() {
           <Instagram />
           <Linkedin />
           <Twitter />
-          <Plus />
+          <Plus /> 
         </div>
       </div>
     </div>
