@@ -5,6 +5,13 @@ export default function UserCard() {
       <div className="size-48">
         <img src="/user.png" alt="user" className="rounded-full object-cover w-full h-full" />
       </div>
+      <div className="flex flex-col gap-2 w-full">
+        <div className="flex items-center gap-2">
+          <h3 className="text-3xl font-bold min-w-0 overflow-hidden">
+            User Dev
+          </h3>
+        </div>
+      </div>
     </div>
   )
 }
