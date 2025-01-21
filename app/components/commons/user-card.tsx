@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin, Twitter, Plus } from 'lucide-react'
+import Button from '../ui/button'
 
 export default function UserCard() {
   return (
@@ -22,6 +23,11 @@ export default function UserCard() {
           <Linkedin />
           <Twitter />
           <Plus /> 
+        </div>
+        <div className='flex flex-col gap-3 w-full -h[172px]'>
+          <div className='w-full flex flex-col items-center gap-3'>
+            <Button>Template Saas - Compre agora</Button>
+          </div>
         </div>
       </div>
     </div>
