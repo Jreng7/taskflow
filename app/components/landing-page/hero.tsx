@@ -1,2 +1,8 @@
 
-export function hero
+export function Hero(){
+  return (
+    <div>
+      
+    </div>
+  )
+}
