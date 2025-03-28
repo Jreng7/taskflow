@@ -1,10 +1,10 @@
+import { taskSchema } from '../schema/todo';
+
 class TodoController {
-  async index(req, res) {
-    
-  }
+  async index(req, res) {}
 
   async create(req, res) {
-    const { name } = req.body;
+    const { id, name, status } = taskSchema.parse(req.body);
   }
 }
 
