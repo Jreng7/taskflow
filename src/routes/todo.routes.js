@@ -1,5 +1,6 @@
 import { Router } from 'express';
+import TodoController from '../controller/todo.controller';
 
-const routerTodo = Router();
+export const routerTodo = Router();
 
-export { routerTodo };
+routerTodo.post('/', TodoController.create);
