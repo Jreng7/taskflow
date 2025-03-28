@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Aplicação fullstack tasks",
   "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
   "repository": "git@github.com:Jreng7/taskflow.git",
   "author": "Jreng7 <jr.waydev@gmail.com>",
   "license": "MIT",
