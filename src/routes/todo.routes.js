@@ -5,3 +5,4 @@ export const routerTodo = Router();
 
 routerTodo.get('/', TodoController.index);
 routerTodo.post('/', TodoController.create);
+routerTodo.put('/:id', TodoController.update);

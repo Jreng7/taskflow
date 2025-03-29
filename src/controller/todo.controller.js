@@ -32,6 +32,11 @@ class TodoController {
       return res.status(500).json({ error: 'Erro interno ao criar tarefa.' });
     }
   }
+
+  async update(req, res) {
+    const { id } = req.params
+    const { name, status } = taskSchema.parse(req.body)
+  }
 }
 
 export default new TodoController();
