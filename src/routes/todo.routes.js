@@ -3,4 +3,5 @@ import TodoController from '../controller/todo.controller.js';
 
 export const routerTodo = Router();
 
+routerTodo.get('/', TodoController.index);
 routerTodo.post('/', TodoController.create);

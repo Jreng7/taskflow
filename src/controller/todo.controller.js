@@ -2,9 +2,15 @@ import { taskSchema } from '../schema/todo.js';
 import { prisma } from '../lib/prisma.js';
 
 class TodoController {
+
   async index(req, res) {
     try {
       const tasks = await prisma.todo.findMany();
+
+      if(!tasks){
+        return res.status(404).json({ message: 'Task not found'})
+      }
+
       return res.status(200).json(tasks);
     } catch (err) {
       console.error('Erro no banco de dados:', err);
@@ -14,11 +20,10 @@ class TodoController {
 
   async create(req, res) {
     try {
-      const { name, status } = taskSchema.parse(req.body);
+      const { name } = taskSchema.parse(req.body);
       const task = await prisma.todo.create({
         data: {
-          name,
-          status: status ?? false,
+          name
         },
       });
       return res.status(201).json(task);

@@ -10,8 +10,4 @@ app.use(cors());
 app.use(helmet());
 app.use(router)
 
-app.get('/', (req, res) => {
-  res.status(200).json({ message: "server running"})
-})
-
 export default app;
