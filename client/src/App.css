@@ -2,6 +2,7 @@ button {
   border: none;
 }
 
+
 .container {
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
@@ -21,7 +22,7 @@ button {
   background: rgba(255, 255, 255, 0.1); /* Branco com 10% de opacidade */
   backdrop-filter: blur(10px); /* Efeito de desfoque */
   -webkit-backdrop-filter: blur(10px); /* Para compatibilidade com Safari */
-  border-radius: 16px; /* Bordas arredondadas */
+  border-radius: 16px 0 0 16px; /* Bordas arredondadas */
   border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }

@@ -2,9 +2,11 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="container">
-      <div className="todos"></div>
-    </div>
+    <>
+      <main className="container">
+        <div className="todos"></div>
+      </main>
+    </>
   );
 }
 
