@@ -73,9 +73,8 @@ class TodoController {
         return res.status(404).json({ message: 'Task not found' });
       }
 
-      await prisma.todo.delete(taskExists)
-
-      return res.status(204).end()
+      await prisma.todo.delete({ where: { id: taskId } });
+      return res.status(204).end();
     } catch (err) {
       return res.status(500).json({ error: 'Erro interno ao deletar a task.' });
     }
