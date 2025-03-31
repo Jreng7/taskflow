@@ -1,16 +1,19 @@
-import { useState } from "react";
 import "./App.css";
 import Todos from "./Components/Todo";
-
-const arrayTasks = [
-  { name: "Limpar a casa e depois estudar inglês para poder treinar conversação.", status: true },
-  { name: "Comprar cadeira gamer", status: false },
-]
-
+import { getTodos } from "./service/api";
+import { useEffect, useState } from "react";
 
 function App() {
 
-  const [todo, setTodo] = useState([])
+  const [todos, setTodos] = useState([])
+
+  useEffect(() => {
+    const fetchTodos = async () => {
+      const response = await getTodos();
+      setTodos(response)
+    };
+    fetchTodos();
+  },[])
 
   return (
     <>
@@ -19,7 +22,7 @@ function App() {
           <h2>Minhas Tarefas</h2>
         </header>
 
-        <Todos dados={arrayTasks}></Todos>
+        <Todos dados={todos}></Todos>
 
         <input className="inputName" />
         <button className="newTaskButton">Nova Tarefa</button>

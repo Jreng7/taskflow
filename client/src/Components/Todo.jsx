@@ -7,13 +7,10 @@ const Todos = ({ dados }) => {
       {dados.map((itemPercorrido) => {
         return (
           <div className="todo" key={itemPercorrido.id}>
-            <button
-              className="checkbox"
-              style={{
-                backgroundColor: itemPercorrido.status ? "chocolate " : "white",
-              }}
-            ></button>
+            
+            <button className="checkbox" style={{backgroundColor: itemPercorrido.status ? "chocolate " : "white", }}></button>
             <p>{itemPercorrido.name}</p>
+
             <button className="btn1">
               <AiOutlineEdit></AiOutlineEdit>
             </button>
