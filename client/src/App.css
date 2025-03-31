@@ -2,6 +2,39 @@ button {
   border: none;
 }
 
+.btn1, .btn2 {
+  margin-right: 0.7rem;
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.btn1 {
+  background-color: rgb(66, 150, 122);
+  border: 1px solid transparent;
+  transition: 0.3s ease;
+}
+
+.btn1:hover  {
+  background-color: rgba(36, 230, 149, 0.664);
+  border: 1px solid rgb(160, 255, 208);
+  color: rgb(233, 206, 173);
+}
+
+.btn2{
+  background-color: rgb(158, 81, 25);
+  border: 1px solid transparent;
+  transition: 0.3s ease;
+}
+
+.btn2:hover  {
+  background-color: chocolate;
+  border: 1px solid rgb(255, 171, 132);
+  color: rgb(207, 189, 165);
+}
+
+
+
 .container {
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
