@@ -1,37 +1,28 @@
+import { useState } from "react";
 import "./App.css";
-import { AiOutlineEdit, AiOutlineDelete } from 'react-icons/ai'
+import Todos from "./Components/Todo";
 
 const arrayTasks = [
   { name: "Limpar a casa e depois estudar inglês para poder treinar conversação.", status: true },
   { name: "Comprar cadeira gamer", status: false },
 ]
 
-const Todos = ({ dados }) => {
-  return (
-    <div className="todos">
-      {dados.map(itemPercorrido => {
-        return (
-          <div className="todo">
-            <button className="checkbox" style={ {backgroundColor: itemPercorrido.status ? 'chocolate ' : 'white' } }></button>
-            <p>{itemPercorrido.name}</p>
-            <button className="btn1"><AiOutlineEdit></AiOutlineEdit></button>
-            <button className="btn2"><AiOutlineDelete></AiOutlineDelete></button>
-          </div>
-        )
-      })}
-    </div>
-  )
-}
-
 
 function App() {
+
+  const [todo, setTodo] = useState([])
+
   return (
     <>
       <main className="container">
         <header className="title">
           <h2>Minhas Tarefas</h2>
         </header>
+
         <Todos dados={arrayTasks}></Todos>
+
+        <input className="inputName" />
+        <button className="newTaskButton">Nova Tarefa</button>
       </main>
     </>
   );
