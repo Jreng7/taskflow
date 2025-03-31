@@ -25,7 +25,7 @@ function App() {
         <Todos dados={todos}></Todos>
 
         <input className="inputName" />
-        <button className="newTaskButton">Nova Tarefa</button>
+        <button className="newTaskButton">Add Tarefa</button>
       </main>
     </>
   );

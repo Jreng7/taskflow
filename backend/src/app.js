@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({
   origin: [
-    'http://localhost:3033',
+    'http://localhost:5173',
     'https://fronend.vercel.app'
   ]
 }));
