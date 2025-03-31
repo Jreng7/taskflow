@@ -1,6 +1,6 @@
 import "./App.css";
 import Todos from "./Components/Todo";
-import { getTodos } from "./service/api";
+import { getTodos, createTodo } from "./service/api";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -13,6 +13,13 @@ function App() {
     setInputVisibility(!inputVisibily);
   }
 
+  const handleCreateTodo = async () => {
+    const newTodo = await createTodo({ name: inputValue });
+    setTodos([...todos, newTodo]); 
+    setInputValue(''); 
+    setInputVisibility(false);
+  }
+
   useEffect(() => {
     const fetchTodos = async () => {
       const response = await getTodos();
@@ -20,6 +27,7 @@ function App() {
     };
     fetchTodos();
   },[])
+
 
   return (
     <>
@@ -35,10 +43,12 @@ function App() {
           onChange={(event) => {setInputValue(event.target.value)}}
           style={ {display: inputVisibily ? "block" : "none"} } 
         />
-        <button onClick={handleNewButton} className="newTaskButton">Add Tarefa</button>
+        <button onClick={inputVisibily ? handleCreateTodo : handleNewButton} className="newTaskButton">
+          {inputVisibily ? 'Confirmar' : 'Add Tarefa'}
+        </button>
       </main>
     </>
   );
-} 
+}
 
-export default App;
+export default App
